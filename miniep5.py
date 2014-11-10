@@ -32,15 +32,16 @@ def t_error(t):
 #Contruir o lexer
 lexer = lex.lex()
 
+#Inicializa a pilha
 stack = []
 
+#Pede a expressão pela entrada padrão
 data = input('Entre com uma expressao em notacao posfixa:\n' )
 
-value = 0
-
+#Entra com a expressão no analizador lexico
 lexer.input(data)
 
-
+value = 0
 
 while True:
 	tok = lexer.token()
